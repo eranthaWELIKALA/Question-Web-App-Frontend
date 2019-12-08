@@ -1,0 +1,18 @@
+<nav id="navPanel" class="bg-light border-bottom box-shadow fixed-top navbar-expand-lg">
+    <app-header [minimalOption]="false"></app-header>
+</nav>
+
+<!-- Body -->
+<div style="width: 100%;" [style.padding-top.px]="60" [style.height.px]="divHeight">
+    <as-split direction="horizontal" [gutterSize]="2">
+      <as-split-area [order]="0" [size]="sharedService.viewPaperWidth">
+        <app-view-paper></app-view-paper>
+      </as-split-area>
+      <as-split-area [order]="1" [size]="sharedService.createPaperWidth" (onchange)="sharedService.changeCreatePaperWidthRequest()">
+        <app-create-paper></app-create-paper>
+      </as-split-area>
+      <as-split-area [order]="2" [size]="sharedService.sidePanelWidth">
+        <app-side-panel></app-side-panel>
+      </as-split-area>
+    </as-split>
+</div>

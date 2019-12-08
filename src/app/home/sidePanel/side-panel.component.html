@@ -1,0 +1,10 @@
+<div style="height: 100%; width: 100%;" [style.padding-top.px]="60" [style.width.px]="divWidth">
+  <as-split direction="vertical" [gutterSize]="2">
+    <as-split-area [order]="0" [size]="20">
+      <button class="btn btn-lg" (click)="createNewPaper()"><i class="fas fa-plus-circle fa-lg"></i></button>
+    </as-split-area>
+    <as-split-area [order]="1" [size]="80">
+      <textarea>Hello</textarea>
+    </as-split-area>
+  </as-split>
+</div>
